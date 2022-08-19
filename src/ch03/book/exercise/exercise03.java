@@ -2,6 +2,10 @@ package ch03.book.exercise;
 
 public class exercise03 {
 	public static void main(String[] args) {
+		
+		int score = 85;
+		String result = (!(score > 90))? "가":"나";
+		System.out.println(result);
 // 연습문제
 // 1번) app만 뽑아서 출력		
 //	String a = "apple";
@@ -44,9 +48,9 @@ public class exercise03 {
 //	4번)변수 num의 값 중에서 일의 자리를 1로 바꾸는 코드이다. 
 //		만일 변수 num의 값이 333이라면 331이 되고, 777이라면 771이 된다.
 		
-		int num = 333;
-		
-		System.out.println(((num/10)*10)+1);
+//		int num = 333;
+//		
+//		System.out.println(((num/10)*10)+1);
 	
 	
 	}
