@@ -26,7 +26,4 @@ public class IfNestedExample {
 }
 
 
-sum = a+b;
-if(sum==0){
-  return negative;
-}
+
