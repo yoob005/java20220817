@@ -50,5 +50,16 @@ public class C04Integer {
 				// 2147483648 x
 				int t = s + 1; 
 				System.out.println(t); 
+				
+				System.out.println(half(5));
+	}
+
+	public static double half(double a) {
+		// TODO Auto-generated method stub
+		return a / 2;
+	}
+	public static double half(int a) {
+		// TODO Auto-generated method stub
+		return a / 2;
 	}
 }
