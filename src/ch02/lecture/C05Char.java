@@ -19,7 +19,6 @@ public class C05Char {
 		char k = '\u270d';
 		
 	}
-}
 
 
 public String notString(String str) {
@@ -36,3 +35,4 @@ public String notString(String str) {
 	    return str;
 	  }
 	}
+}

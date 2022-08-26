@@ -14,5 +14,17 @@ public class Statement {
 		System.out.println("첫번째 명령문");
 		System.out.println("두번째 명령문");
 		System.out.println("세번째 명령문");
+		
+		String str = "ozzzzzzz";
+		
+		String o = str.substring(0,1);
+		String z = str.substring(1,2);
+		String a = "o";
+		String b = "z";
+		
+		System.out.println(o);
+		System.out.println(z);
+		System.out.println(a);
+		System.out.println(b);
 	}
 }
