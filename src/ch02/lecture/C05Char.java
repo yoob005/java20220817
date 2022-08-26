@@ -20,3 +20,19 @@ public class C05Char {
 		
 	}
 }
+
+
+public String notString(String str) {
+	  int a=0;
+	  int b=1;
+	  
+	  String c = str.substring(a,b);
+	  String d = "n";
+	  if(!c.equals(d)){
+	    return "not " +  str;
+	  }else if(str.length()==2){
+	    return "not " + str;
+	  }else {
+	    return str;
+	  }
+	}
