@@ -2,29 +2,26 @@ package java20220817;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		System.out.println("Hello World");
-
-		// 구구단 2~9단 출력
-		for (int a = 2; a < 10; a++) {
-			System.out.println();
-			System.out.println("구구단" + a + "단");
-
-			for (int i = 1; i < 10; i++) {
-				System.out.println(a + " x " + i + " = " + a * i);
-
-			}
-		}
+//		public boolean sameEnds(int[] nums, int len) {
 		
+		int[] nums = {1,2,3,2,5,2};
+		int val = 2;
 		
-		// 1~100 짝수의 합만 구하기
-		
-		int sum = 0;
-		for(int i = 0; i<=100; i++) {
-			if(i%2==0) {
-				sum = sum+i; 
-			}
-		}
-		System.out.println(sum);
-	
+		int[] arr = new int[nums.length];
+		  
+	    for(int i=0; i < nums.length; i++){
+	      arr[i] = nums[i];
+	      if(i!=0&&i!=(nums.length-1)){
+	        if(nums[i]==val){
+	          if(nums[i-1]>nums[i+1]){
+	            arr[i]=nums[i-1];
+	          }else if(nums[i-1]<nums[i+1]){
+	            arr[i]=nums[i+1];
+	          }
+	        }
+	      }
+	    }
 	}
 }
+
+
