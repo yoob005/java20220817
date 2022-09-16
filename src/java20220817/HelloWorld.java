@@ -1,27 +1,39 @@
 package java20220817;
 
+import java.util.*;
+
 public class HelloWorld {
 	public static void main(String[] args) {
-//		public boolean sameEnds(int[] nums, int len) {
+		String allowed = "ab";
+		String[] words = {"ab","bd","aaab","baa","badab"};
 		
-		int[] nums = {1,2,3,2,5,2};
-		int val = 2;
+		Set<Character> set1 = new HashSet<>();
+		for(int i=0; i < allowed.length(); i++) {
+			set1.add(allowed.charAt(i));
+		}
 		
-		int[] arr = new int[nums.length];
-		  
-	    for(int i=0; i < nums.length; i++){
-	      arr[i] = nums[i];
-	      if(i!=0&&i!=(nums.length-1)){
-	        if(nums[i]==val){
-	          if(nums[i-1]>nums[i+1]){
-	            arr[i]=nums[i-1];
-	          }else if(nums[i-1]<nums[i+1]){
-	            arr[i]=nums[i+1];
-	          }
-	        }
-	      }
-	    }
+		int answer = 0;
+		
+		for(int i=0; i < words.length; i++) {
+			int count = 0;
+			Set<Character> set2 = new HashSet<>();
+			for(int j=0; j < words[i].length(); j++) {
+				set2.add(words[i].charAt(j));
+				}
+			Character[] arr = set2.toArray(new Character[0]);
+			for(int k = 0; k < arr.length; k++) {
+				if(!set1.add(arr[k])) {
+					count++;
+				}
+			}
+			if(count==2) {
+				answer++;
+			}
 	}
+		
+		System.out.println(answer);
+		
 }
-
+}	
+ 
 
