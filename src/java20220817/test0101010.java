@@ -9,11 +9,43 @@ import ch11.book.s110302.Key;
 
 public class test0101010 {
 	public static void main(String[] args) {
-		int[][] arr1 = {{1,2},{2,3}};
-		int[][] arr2 = {{3,4},{5,6}};
+		String s = "try hello world";
 		
-		arr(arr1, arr2);
-
+		String result = "";
+		String add = "";
+		int blankcount = 1;
+		for(int i = 0; i < s.length(); i++) {
+			if(s.substring(i, i+1).equals(" ")) {
+				add+= (s.substring(i, i+1));
+				blankcount++;
+			}
+//			여백갯수 홀수일때
+			if(blankcount%2==1) {
+				if((!s.substring(i, i+1).equals(" "))&&(i%2==1)) {
+					add+= (s.substring(i, i+1)).toUpperCase();
+				}
+				
+				if((!s.substring(i, i+1).equals(" "))&&(i%2==0)) {
+					add+= s.substring(i, i+1);
+				}
+			}
+//			여백 갯수 짝수 일 때 
+			if(blankcount%2==0) {
+				if((!s.substring(i, i+1).equals(" "))&&(i%2==0)) {
+					add+= (s.substring(i, i+1)).toUpperCase();
+				}
+				
+				if((!s.substring(i, i+1).equals(" "))&&(i%2==1)) {
+					add+= s.substring(i, i+1);
+				}
+			}
+			if(!s.substring(i, i+1).equals(" ")){
+				blankcount = 0;
+			}
+			
+		}
+		
+		System.out.println(add);
 	}
 
 	public static boolean charAscii(String str) {
@@ -51,11 +83,19 @@ public class test0101010 {
 		return answer;
 	}
 	
+	
+	
 	public static int[][] arr(int[][] arr1, int[][] arr2){
-		int[][] answer = {};
+		int[][] answer = new int[arr1.length][arr1[0].length];
 		
+		for(int i=0; i < arr1.length; i++) {
+			for(int j = 0; j < arr1[i].length; j++) {
+				answer[i][j] = arr1[i][j] + arr2[i][j];
+			}
+		}
+
 		return answer;
-		
+	
 		
 	}
 }
